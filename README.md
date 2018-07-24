@@ -4,12 +4,12 @@ Following is a question or take home assignment was given in a Software Engineer
 
 # Question | Assignment
 
-##Instruction:
+## Instruction:
 -	All programs are to be written in Java programming language (Please state clearly the version that is used)
 -	For any unclear information, please make assumptions) and state your reason(s)
 -	Submit your solution with a clear instruction of how to download, configure, compile and run your programs
 
-##Problem Set
+## Problem Set
 
 ### Part 1 - Simple form
 Using Spring Boot (http://projects.spring.io/spring-boot/) create a Java web application project with an embedded web server (pick any) and embedded database (pick any). In addition to that, you could use any technology if necessary.
@@ -24,5 +24,5 @@ If it is Normal user, add 1 additional input field, date of birth
 
 On submit, the page should either clear the form, and display the message ‘User data saved’, or it should indicate an error if any of the input fields are empty.
 
-###Part 2 - Search functionality
+### Part 2 - Search functionality
 Create a page to search for a user. It should contain one input field and a ‘search’ button. On submitting the form, it should display a list of all users where either the firstname, lastname, biodata, job responsibility (if admin) or together contain the search word(s).
