@@ -1,6 +1,6 @@
-# Getting Started and Explore Spring Boot Features
+# Getting Started and Explore Spring Boot Features with sample User Management Application
 
-Following is a question or take home assignment was given in a Software Engineer (Java) interview. This project is an attempt to solve that problem to demonstrate how to getting started a Spring Boot application while exploring its features.
+Following is a question or take home assignment was given in a Software Engineer (Java) interview. This project is all about exploring Spring Boot and its features in the process of solving that problem.
 
 # Question | Assignment
 
