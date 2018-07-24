@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<div th:replace="fragments/header :: header-css" />
+</head>
+<body>
+	<div th:replace="fragments/header :: header" />
+
+	<div th:replace="user/findUserForm :: user-find-form" />
+	
+	<div class="container">
+
+    <h2>Users</h2>
+    <table id="users" class="table table-striped">
+        <thead>
+        <tr>
+            <th style="width: 150px;">Name</th>
+            <th style="width: 200px;">Biodata</th>
+            <th>email</th>
+            <th>User Type</th>
+            <th>Job responsibility description</th>
+            <th>Admin access code</th>
+            <th>Date of birth</th>
+        </tr>
+        </thead>
+        <tbody>
+          <tr th:each="user : ${selections}">
+              <td>
+                  <a th:href="@{users/__${user.id}__}" th:text="${user.firstName + ' ' + user.lastName}"></a>
+              </td>
+              <td th:text="${user.biodata}"></td>
+              <td th:text="${user.email}"></td>
+              <td th:text="${T(com.idotrick.gssb.user.model.EUserType).get(user.userType)}"></td>
+              <td th:text="${user.jobResponsibilityDesc}"></td>
+              <td th:text="${user.adminAccessCode}"></td>
+              <td th:text="${user.dateOfBirth}"></td>
+          </tr>
+        </tbody>
+    </table>
+	</div>
+
+	<div th:replace="fragments/footer :: footer" />
+</body>
+</html>

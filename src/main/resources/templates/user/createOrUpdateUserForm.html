@@ -1,0 +1,34 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<div th:replace="fragments/header :: header-css" />
+</head>
+<body>
+	<div th:replace="fragments/header :: header" />
+
+	<div class="container">
+		<h2 id="header">User</h2>
+		<form th:object="${user}" class="form-horizontal" id="add-User-form" method="post">
+			<div class="form-group has-feedback">
+				<input th:replace="fragments/inputField :: input ('First name', 'firstName')" />
+				<input th:replace="fragments/inputField :: input ('Last name', 'lastName')" />		
+				<input th:replace="fragments/textareaField :: textarea ('Biodata', 'biodata')"/>
+				<input th:replace="fragments/inputField :: input ('email', 'email')" />
+				<input th:replace="fragments/selectField :: select ('User type', 'userType')" />
+				<input id="user-jobresponsibilitydesc" th:replace="fragments/textareaField :: textarea ('Job responsibility description', 'jobResponsibilityDesc')" />
+				<input id="user-adminaccesscode" th:replace="fragments/inputField :: input ('Admin access code', 'adminAccessCode')" />
+				<input id="user-dateofbirth" th:replace="fragments/dateField :: datepicker ('Date of birth', 'dateOfBirth')" />						
+			</div>
+			<div class="form-group">
+				<div class="col-sm-offset-2 col-sm-10">
+					<button type="submit" name="save" class="btn btn-large btn-success"
+						th:text="#{button.save}">Save</button>
+					<button type="reset" name="cancel" class="btn btn-large btn-fail"
+						th:text="#{button.cancel}">Cancel</button>
+				</div>
+			</div>
+		</form>
+	</div>
+	<div th:replace="fragments/footer :: footer" />
+</body>
+</html>

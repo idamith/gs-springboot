@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<div th:replace="fragments/header :: header-css" />
+</head>
+<body>
+	<div th:replace="fragments/header :: header" />
+
+	<div th:fragment="user-find-form" class="container">
+	<form action="#" th:action="@{/users/find}" method="get">
+		<table>
+			<tbody>
+				<tr>
+					<td>
+						<input type="text" name="q" id="search-term"/>
+						<button type="submit" class="btn btn-large btn-success" th:text="#{button.search}">Find</button>		
+					</td>
+				</tr>
+				
+				<tr>
+					<td>
+						<p>Search here for Users by first name, last name, biodata, job responsibility (if admin) or together contain the search word(s).</p>
+					</td>
+				</tr>				
+			</tbody>
+		</table>
+		
+		
+
+	</form>
+	</div>
+
+	<div th:replace="fragments/footer :: footer" />
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<div th:fragment="header-css">
+	<link rel="stylesheet" th:href="@{/webjars/bootstrap/3.3.7/css/bootstrap.min.css}" />
+	<link rel="stylesheet" th:href="@{/css/animate.min.css}" />
+	<link rel="stylesheet" th:href="@{/css/bootstrap-dropdownhover.min.css}" />
+	<link rel="stylesheet" th:href="@{/css/app-main.css}" />	
+</div>
+</head>
+<body>
+	<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1"
+		data-hover="dropdown"
+		data-animations="fadeInDown fadeInRight fadeInUp fadeInLeft"
+		th:fragment="header">
+		<nav class="navbar navbar-inverse">
+			<div class="navbar-header">
+				<a class="navbar-brand" th:href="@{/}">Home</a>
+			</div>
+			<ul class="nav navbar-nav">
+				<li class="dropdown"><a href="#" class="dropdown-toggle"
+					data-toggle="dropdown" role="button" aria-expanded="false">User<span
+						class="caret"></span>
+				</a>
+					<ul class="dropdown-menu dropdownhover-bottom" role="menu">
+						<li><a th:href="@{/users/new}">Create new user</a></li>
+						<li><a th:href="@{/users/find}">Find user</a></li>
+					</ul></li>
+
+			</ul>
+		</nav>
+	</div>
+</body>
+</html>
